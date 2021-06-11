@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
 
 
 </head>
@@ -44,7 +46,7 @@
         <div class="main-content">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <div class="main-title">
+                    <div class="main-title wow fadeInLeft">
                         <h1>Ремонт коммерческих <br> помещений</h1>
                         <p class = "main-subtitle">Идеальный ремонт <br>в кратчайшие сроки</p>
                         <span>
@@ -57,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-ld-offset-2 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2">
-                    <div class="main-form">
+                    <div class="main-form wow fadeInRight">
                         <h2 class="main-form-header">Для расчета точной стоимости <br><strong>закажите выезд замерщика</strong></h2>
                         <form class="form" action="send.php" method="POST">
                             <label for="">Ваше имя</label>
@@ -707,14 +709,19 @@
 <script src = "slick-1.8.1/slick/slick.min.js"></script>
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
+</script>
+<script >
+    new WOW().init();
+</script>
+
 <script>
 
     $(document).ready(function(){
 
-     $('.popup-btn').on('click', function(event){
+     $('.popup-btn').on('click touchstart', function(event){
 event.preventDefault();
  $('.popup').fadeIn();
- $("main").toggleClass("shadow");
 
 });
 
@@ -722,6 +729,8 @@ $('.popup-close').on('click', function(event){
 event.preventDefault();
     $('.popup').fadeOut();
 });
+
+
 
         /*Отзывы*/
         $('.feedback-slider').slick({

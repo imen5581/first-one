@@ -224,6 +224,7 @@ picture img {
 }
 .price {
   background: url(../img/1111.png) repeat center;
+  
 }
 .price-header-btn {
   margin-top: 2rem;
@@ -555,6 +556,7 @@ footer {
   }
 }
 @media (max-width: 767px) {
+  
   .main {
     background-position: top left;
   }
